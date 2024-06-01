@@ -1,6 +1,7 @@
 // * To emit and listen to other classes events
 import EventEmitter from './EventEmitter'
 
+// ? HANDLES SIZES
 export default class Sizes extends EventEmitter {
   constructor() {
     // * Call super cause we are extending it

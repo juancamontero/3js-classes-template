@@ -1,12 +1,11 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-import Experience from '../Experience'
-import EventEmitter from './EventEmitter'
+import Experience from './Experience'
 
-export default class Camera extends EventEmitter {
+
+export default class Camera {
   constructor() {
-    super()
 
     // setup
     this.experience = new Experience()
@@ -39,5 +38,9 @@ export default class Camera extends EventEmitter {
   resize() {
     this.instance.aspect = this.sizes.width / this.sizes.height
     this.instance.updateProjectionMatrix()
+  }
+  //* to update orbit controls in time
+  update() {
+    this.controls.update()
   }
 }

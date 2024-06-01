@@ -1,5 +1,6 @@
 //* took from https://gist.github.com/brunosimon/120acda915e6629e3a4d497935b16bdf
 
+// ? HANDLES EVENTS BETWEEN CLASSES
 export default class EventEmitter {
   constructor() {
     this.callbacks = {}
